@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import React, { FC, useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./Cursor.css";
 
-export default function Cursor() {
+const Cursor: FC = () => {
   const cursorRef = useRef<HTMLDivElement>(null);
   const followerRef = useRef<HTMLDivElement>(null);
 
@@ -69,4 +69,6 @@ export default function Cursor() {
       <div ref={followerRef} className="cursor-follower"></div>
     </>
   );
-}
+};
+
+export default Cursor;
