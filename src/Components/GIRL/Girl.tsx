@@ -1,5 +1,6 @@
-import React, { FC, useState, useEffect, useRef } from "react";
-import gsap, { TimelineMax, Power3, Elastic } from "gsap";
+import { FC, useState, useEffect, useRef } from "react";
+import gsap from "gsap";
+import "./Girl.css";
 
 const Girl: FC = () => {
   const [xPosition, setXPosition] = useState<number | null>(null);

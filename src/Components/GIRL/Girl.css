@@ -1,0 +1,5 @@
+#img {
+  flex-shrink: 0;
+  width: 450px;
+  max-width: 90vw;
+}
