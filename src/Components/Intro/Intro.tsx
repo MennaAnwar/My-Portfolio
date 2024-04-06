@@ -5,22 +5,20 @@ import "./intro.css";
 const Intro: FC = () => {
   const bgdRef = useRef<SVGRectElement>(null);
   const tableRef = useRef<SVGGElement>(null);
-  const lampLegRef = useRef<SVGGElement>(null);
-  const lampbtRef = useRef<SVGElement>(null);
-  const lampLineBRef = useRef<SVGElement>(null);
-  const lampCircleRef = useRef<SVGElement>(null);
-  const lampLineTRef = useRef<SVGElement>(null);
-  const lampHeadRef = useRef<SVGElement>(null);
-  const lampHeaderRef = useRef<SVGElement>(null);
-  const lampBodyRef = useRef<SVGElement>(null);
+  const lampLegRef = useRef<SVGPolylineElement>(null);
+  const lampbtRef = useRef<SVGGElement>(null);
+  const lampLineBRef = useRef<SVGGElement>(null);
+  const lampCircleRef = useRef<SVGEllipseElement>(null);
+  const lampLineTRef = useRef<SVGGElement>(null);
+  const lampHeadRef = useRef<SVGGElement>(null);
+  const lampHeaderRef = useRef<SVGGElement>(null);
+  const lampBodyRef = useRef<SVGGElement>(null);
   const computerRef = useRef<SVGGElement>(null);
   const keyboardRef = useRef<SVGGElement>(null);
-  const assetRef = useRef<SVGGElement>(null);
-  const lampLightRef = useRef<SVGElement>(null);
-  const waveRef = useRef<SVGElement>(null);
-  const lampLineRef = useRef<SVGElement>(null);
-  const nameRef = useRef<SVGElement>(null);
-  const screenRef = useRef<SVGElement>(null);
+  const lampLightRef = useRef<SVGPolylineElement>(null);
+  const lampLineRef = useRef<SVGGElement>(null);
+  const nameRef = useRef<SVGTextElement>(null);
+  const screenRef = useRef<SVGRectElement>(null);
 
   useEffect(() => {
     if (
@@ -36,9 +34,7 @@ const Intro: FC = () => {
       lampBodyRef.current &&
       computerRef.current &&
       keyboardRef.current &&
-      assetRef.current &&
       lampLightRef.current &&
-      waveRef.current &&
       lampLineRef.current &&
       nameRef.current &&
       screenRef.current
@@ -98,7 +94,7 @@ const Intro: FC = () => {
           duration: 0.5,
         })
         .staggerFrom(
-          computerRef.current.children,
+          computerRef.current,
           1,
           {
             opacity: 0,
@@ -109,15 +105,9 @@ const Intro: FC = () => {
           0.2
         )
         .staggerFrom(
-          keyboardRef.current.children,
+          keyboardRef.current,
           0.5,
           { opacity: 0, y: "-=100", ease: "linear.inOut" },
-          0.05
-        )
-        .staggerFrom(
-          assetRef.current.children,
-          0.5,
-          { opacity: 0, ease: "linear.inOut" },
           0.05
         )
         .to(lampLightRef.current, {
@@ -136,11 +126,6 @@ const Intro: FC = () => {
           fill: "rgb(255 240 0)",
           duration: 0.2,
         })
-        .to(waveRef.current, {
-          opacity: 1,
-          fill: "rgb(255 240 0)",
-          duration: 0.1,
-        })
         .fromTo(
           lampLineRef.current,
           { opacity: 0 },
@@ -150,7 +135,7 @@ const Intro: FC = () => {
         .to(lampLineRef.current, { opacity: 1, duration: 0.1 }, "+=0.05")
         .to(lampLineRef.current, { opacity: 0.5, duration: 0.1 }, "+=0.05")
         .staggerFrom(
-          nameRef.current.children,
+          nameRef.current,
           1.5,
           { opacity: 0, transformOrigin: "center center", ease: "back.out" },
           0.6
@@ -173,10 +158,17 @@ const Intro: FC = () => {
           xmlSpace="preserve"
         >
           <g id="background">
-            <rect x="-9.7" y="0" fill="#2c3e50" width="1197.1" height="662.8" />
+            <rect
+              ref={bgdRef}
+              x="-9.7"
+              y="0"
+              fill="#2c3e50"
+              width="1197.1"
+              height="662.8"
+            />
           </g>
           <g>
-            <text x="400" y="220" id="name" className="disney">
+            <text x="400" y="220" id="name" className="disney" ref={nameRef}>
               Menna Mohamed Anwar
             </text>
           </g>
@@ -252,7 +244,7 @@ const Intro: FC = () => {
               height="6.6"
             />
           </g>
-          <g id="computer">
+          <g id="computer" ref={computerRef}>
             <polygon
               style={{
                 fill: "#888889",
@@ -285,6 +277,7 @@ const Intro: FC = () => {
             />
             <rect
               id="screen"
+              ref={screenRef}
               x="423.3"
               y="286.1"
               style={{
@@ -358,7 +351,7 @@ const Intro: FC = () => {
         C598.5,521.9,599.6,521.3,601,521L601,521z"
             />
           </g>
-          <g id="keyboard">
+          <g id="keyboard" ref={keyboardRef}>
             <path
               style={{
                 fill: "#E5E9ED",
@@ -474,9 +467,9 @@ const Intro: FC = () => {
             />
           </g>
           <g id="lamp">
-            <g id="lamp-body">
-              <g id="lamp-header">
-                <g id="lamp-line-t">
+            <g id="lamp-body" ref={lampBodyRef}>
+              <g id="lamp-header" ref={lampHeaderRef}>
+                <g id="lamp-line-t" ref={lampLineTRef}>
                   <polyline
                     style={{
                       fill: "#228370",
@@ -496,7 +489,7 @@ const Intro: FC = () => {
             198.6,342.1   "
                   />
                 </g>
-                <g id="lamp-head">
+                <g id="lamp-head" ref={lampHeadRef}>
                   <ellipse
                     style={{
                       fill: "#228370",
@@ -529,7 +522,7 @@ const Intro: FC = () => {
                   />
                 </g>
               </g>
-              <g id="lamp-line-b">
+              <g id="lamp-line-b" ref={lampLineRef}>
                 <polyline
                   style={{
                     fill: "#228370",
@@ -549,6 +542,7 @@ const Intro: FC = () => {
               </g>
               <ellipse
                 id="lamp-circle"
+                ref={lampCircleRef}
                 style={{
                   fill: "#3FBDA4",
                   stroke: "#0B0B0B",
@@ -563,6 +557,7 @@ const Intro: FC = () => {
 
             <path
               className="lamp-leg"
+              ref={lampLegRef}
               style={{
                 fill: "#228370",
                 stroke: "#0B0B0B",
@@ -571,7 +566,7 @@ const Intro: FC = () => {
               d="M193.8,606.2H66.2v-11.6c0-1.6,2.1-2.9,4.7-2.9h121.2
         c1,0,1.7,0.5,1.7,1.1V606.2z"
             />
-            <g id="lamp-bottom">
+            <g id="lamp-bottom" ref={lampbtRef}>
               <path
                 style={{
                   fill: "#3FBDA4",
@@ -594,10 +589,11 @@ const Intro: FC = () => {
 
             <polyline
               className="light"
+              ref={lampLightRef}
               style={{ opacity: 0, fill: "#FCF1C4" }}
               points="276.4,343 781.8,605.3 312.8,606.8 223,418.9  "
             />
-            <g id="lamp-line">
+            <g id="lamp-line" ref={lampLineBRef}>
               <path
                 style={{ fill: "#2FAF97" }}
                 d="M182.3,357.8c-8.4,28.4,1.9,61.2,23.2,78.5c1.2-0.5-1.2,0.5,0,0l-3.4-108.7
@@ -801,13 +797,13 @@ const Intro: FC = () => {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#2c3e50"
-          fill-opacity="1"
+          fillOpacity="1"
           id="wave"
           d="M0,192L80,165.3C160,139,320,85,480,90.7C640,96,800,160,960,186.7C1120,213,1280,203,1360,197.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
         ></path>
         <path
           fill="#d8b2e1"
-          fill-opacity="1"
+          fillOpacity="1"
           id="lowerWave"
           d="M0,192L80,165.3C160,139,320,85,480,90.7C640,96,800,160,960,186.7C1120,213,1280,203,1360,197.3L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
         ></path>
