@@ -1,0 +1,113 @@
+#contact {
+  background: #009dcc;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bx {
+  margin: auto;
+}
+
+.social {
+  color: #fff;
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+
+.social:hover {
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.5s;
+  -moz-transition: all ease-in 0.5s;
+  -webkit-transition: all ease-in 0.5s;
+  -o-transition: all ease-in 0.5s;
+}
+
+.facebook {
+  color: #4267b2;
+}
+
+.linkedin {
+  color: #1da1f2;
+}
+
+.microsoft {
+  color: #229ae4;
+}
+
+.google {
+  color: #c8232c;
+}
+
+.github {
+  color: #34526f;
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+.bg-ico {
+  display: flex;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0.99;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+.bg-ico:hover {
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.8);
+}
+
+#facebook:hover {
+  background-color: #4267b2;
+}
+
+#linkedin:hover {
+  background-color: #1da1f2;
+}
+
+#microsoft:hover {
+  background-color: #229ae4;
+}
+
+#google:hover {
+  background-color: #c8232c;
+}
+
+#github:hover {
+  background-color: #34526f;
+}
+
+#whatsapp:hover {
+  background-color: #25d366;
+}
+
+#facebook:hover .facebook,
+#microsoft:hover .microsoft,
+#linkedin:hover .linkedin,
+#google:hover .google,
+#github:hover .github,
+#whatsapp:hover .whatsapp {
+  color: #fff;
+  transform: scale(1.3);
+}
