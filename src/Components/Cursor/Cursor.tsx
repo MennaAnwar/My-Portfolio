@@ -65,8 +65,8 @@ const Cursor: FC = () => {
 
   return (
     <>
-      <div ref={cursorRef} className="cursor"></div>
-      <div ref={followerRef} className="cursor-follower"></div>
+      <div ref={cursorRef} className="cursor" id="c"></div>
+      <div ref={followerRef} className="cursor-follower" id="cf"></div>
     </>
   );
 };

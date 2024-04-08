@@ -52,14 +52,20 @@
   background-color: #ffd600d9;
 }
 
-.cursor.cs {
-  height: 100px;
-  width: 100px;
-  background-color: #ffd600d9;
-}
-
-.cursor.view::after,
-.cursor.cs::after {
+.cursor.view::after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(1);
+}
+
+.view::after {
+  content: "view";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+  color: #000;
+  color: #17171c;
+  font-size: 16px;
+  opacity: 0;
+  transition: 0.5s;
 }
