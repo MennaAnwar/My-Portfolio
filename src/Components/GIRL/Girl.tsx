@@ -71,6 +71,9 @@ const Girl: FC = () => {
           gsap.to(girlRef.current, {
             opacity: 1,
             duration: 1,
+            y: -10,
+            ease: "Power3.out",
+            stagger: 1.5,
           });
           gsap.to(faceRef.current, {
             yPercent: yPercent / 30,
