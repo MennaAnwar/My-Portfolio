@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 import Wave from "../Waves/Wave";
 import {
   VerticalTimeline,
