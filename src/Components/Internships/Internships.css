@@ -1,3 +1,64 @@
 #internships {
   background: #7c99c3;
 }
+
+#slideImg:checked ~ .inner_part {
+  padding: 0;
+  transition: 0.1s ease-in;
+}
+
+.inner_part .img {
+  height: 260px;
+  width: 260px;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+
+#slideImg:checked ~ .inner_part .img {
+  height: 350px;
+  width: 850px;
+  z-index: 99;
+  transition: 0.3s 0.2s ease-in;
+}
+
+.content {
+  padding: 0 20px 0 35px;
+  width: 530px;
+  transition: 0.6s;
+}
+
+.content .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d0925;
+}
+
+.content .text {
+  font-size: 19px;
+  color: #4e4a67;
+  line-height: 1.5em;
+}
+
+.mySwiper .swiper-slide {
+  display: flex;
+  align-items: center;
+}
+
+.mySwiper .content {
+  padding: 20px;
+}
+
+.img {
+  height: 250px;
+  width: 50%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.swiper-pagination {
+  position: unset !important;
+}

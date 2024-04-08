@@ -4,6 +4,16 @@ import "./About.css";
 import Wave from "../Waves/Wave";
 
 const About: FC = () => {
+  const tech = [
+    "JavaScript",
+    "TypeScript",
+    "MySQL",
+    "ReactJs",
+    "PHP  Laravel",
+    "GSAP",
+    "RESTful APIs",
+  ];
+
   return (
     <div id="about">
       <Wave upperFill="#2c3e50" LowerFill="#d8b2e1" />
@@ -17,15 +27,20 @@ const About: FC = () => {
         <div id="me" className="col-sm-12 col-md-12 col-lg-6">
           <h1 className="disney">Hello !!</h1>
           <h2 className="disney">Iam Menna Mohamed Anwar</h2>
-          <p className="reg fs-4">
+          <p className="reg fs-5">
             A web developer skilled in React.js and Laravel, focusing on
             developing responsive web applications. Committed to high-quality,
             maintainable code and continuous learning to solve complex
             challenges, ensuring optimal performance and user satisfaction.
           </p>
+          <p className="reg fs-4">Some Technologies I have used recently:</p>
+          <ul className="skills-list justify-content-center reg">
+            {tech.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
         </div>
       </div>
-      <h1>Skills</h1>
     </div>
   );
 };
