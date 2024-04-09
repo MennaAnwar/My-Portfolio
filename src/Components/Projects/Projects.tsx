@@ -13,12 +13,10 @@ const Projects: FC = () => {
 
   const handleMouseEnter = () => {
     document.getElementById("c")?.classList.add("view");
-    document.getElementById("cf")?.style.display = "block";
   };
 
   const handleMouseLeave = () => {
     document.getElementById("c")?.classList.remove("view");
-    document.getElementById("cf")?.style.display = "none";
   };
 
   const featuredProjects = [
@@ -26,11 +24,13 @@ const Projects: FC = () => {
       title: "Robot Controlling Dashboard",
       tech: "ReactJs Laravel",
       desc: "Developed a web-based dashboard for real-time control of robotic systems. & Coordinated with the embedded team to ensure seamless integration and data flow between the Dashboard, and ROS scripts.",
+      link: "https://github.com/MennaAnwar/Dashboard",
     },
     {
       title: "Music Platform WebApp",
       tech: "ReactJs Laravel",
       desc: "Developed a music platform that provides open-source music APIs for streaming and integrates robust user authentication.",
+      link: "https://github.com/MennaAnwar/Music-Platform",
     },
   ];
 
@@ -48,7 +48,8 @@ const Projects: FC = () => {
               color: "#fff",
             }}
           >
-            <div
+            <a
+              href={item.link}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
@@ -66,7 +67,7 @@ const Projects: FC = () => {
                   <li key={`desc` + index}>{desc}</li>
                 ))}
               </ul>
-            </div>
+            </a>
           </VerticalTimelineElement>
         ))}
 
