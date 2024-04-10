@@ -39,7 +39,9 @@ const Contact: FC = () => {
           </div>
         </a>
       </div>
-      <p className="text-center text-white mb-0">© 2024 Menna Mohamed Anwar</p>
+      <p className="text-center text-white mb-0">
+        © {new Date().getFullYear()} Menna Mohamed Anwar
+      </p>
     </div>
   );
 };
