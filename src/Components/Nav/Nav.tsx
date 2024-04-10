@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-scroll";
 import logo from "../../img/M.png";
 import "./Nav.css";
 
@@ -14,7 +15,7 @@ export default function Nav() {
       <div className="container-fluid">
         <div className="row align-items-center">
           <div className="col-lg-3">
-            <div className="site-branding">
+            <div className="logo">
               <img src={logo} alt="Logo New" />
             </div>
           </div>
@@ -31,29 +32,59 @@ export default function Nav() {
                 <div className="menu-main-menu-container">
                   <ul className="d-flex">
                     <li>
-                      <a href="/dashboard">
+                      <Link
+                        to="about"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
                         <span className="text nav-text">About</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/playlists">
+                      <Link
+                        to="education"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
                         <span className="text nav-text">Education</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/genres">
+                      <Link
+                        to="internships"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
                         <span className="text nav-text">Internships</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="/music">
+                      <Link
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
                         <span className="text nav-text">Projects</span>
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a>
+                      <Link
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={500}
+                      >
                         <span className="text nav-text">Contact</span>
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>

@@ -95,8 +95,8 @@
 
 @media screen and (max-width: 950px) {
   .timeline ul li div {
-    width: 250px;
-    font-size: 10px;
+    width: 270px;
+    font-size: 15px;
     flex-direction: column;
   }
 
@@ -120,7 +120,7 @@
   }
 
   .timeline ul li div {
-    width: calc(100vw - 91px);
+    width: calc(90vw - 91px);
   }
 
   .timeline ul li:nth-of-type(even) > div {

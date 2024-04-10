@@ -10,6 +10,10 @@
   background: #2b2f32ad;
 }
 
+.logo img {
+  width: 55px;
+}
+
 .hamburger {
   height: 60px;
   width: 60px;
@@ -574,6 +578,7 @@
     background: 0 0;
     text-align: center;
     overflow: hidden;
+    background: #2b2f32ad;
   }
   .toggled .header-menu {
     height: 100vh !important;
@@ -596,7 +601,25 @@
     height: 100vh;
     transition-duration: 1s;
   }
-
+  .menu-main-menu-container:before {
+    content: "M";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 30em;
+    z-index: 0;
+    opacity: 0.1;
+    color: var(--primary-color);
+    transition: 0.1s;
+    transition-delay: 0.3s;
+  }
+  .toggled .menu-main-menu-container:before {
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.8s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+    transition-delay: 1.4s;
+  }
   .header-menu:before {
     content: "";
     position: absolute;
