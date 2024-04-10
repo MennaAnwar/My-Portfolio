@@ -15,6 +15,10 @@
   padding-right: 15px;
   padding-left: 15px;
 }
+.Box a {
+  text-decoration: none;
+  color: black;
+}
 
 .course {
   margin-top: 75px;

@@ -7,6 +7,14 @@ import "./OtherProjects.css";
 import otherProjects from "./ProjectsData";
 
 const OtherProjects: FC = () => {
+  const handleMouseEnter = () => {
+    document.getElementById("c")?.classList.add("view");
+  };
+
+  const handleMouseLeave = () => {
+    document.getElementById("c")?.classList.remove("view");
+  };
+
   return (
     <>
       <h2>Other Projects</h2>
@@ -25,18 +33,24 @@ const OtherProjects: FC = () => {
           <SwiperSlide key={`project-` + index}>
             <div className="Box">
               <div className="course web text-center">
-                <div className="icon">
-                  <img src={project.icon} alt={project.title} />
-                </div>
-                <h4>{project.title}</h4>
-                {project.tech.split(" ").map((tech, index) => (
-                  <span
-                    key={`badge` + index}
-                    className="badge rounded-pill bg-primary px-2 py-1 me-2 bg-secondary"
-                  >
-                    {tech}
-                  </span>
-                ))}
+                <a
+                  href={project.link}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <div className="icon">
+                    <img src={project.icon} alt={project.title} />
+                  </div>
+                  <h4>{project.title}</h4>
+                  {project.tech.split(" ").map((tech, index) => (
+                    <span
+                      key={`badge` + index}
+                      className="badge rounded-pill bg-primary px-2 py-1 me-2 bg-secondary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </a>
               </div>
             </div>
           </SwiperSlide>
