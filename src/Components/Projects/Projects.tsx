@@ -5,12 +5,10 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import CursorContext from "../../Context";
 import "./Projects.css";
+import OtherProjects from "../OtherProjects/OtherProejcts";
 
 const Projects: FC = () => {
-  const cursor = useContext(CursorContext);
-
   const handleMouseEnter = () => {
     document.getElementById("c")?.classList.add("view");
   };
@@ -75,6 +73,8 @@ const Projects: FC = () => {
           iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
         />
       </VerticalTimeline>
+
+      <OtherProjects />
     </div>
   );
 };

@@ -41,7 +41,7 @@
   line-height: 1.5em;
 }
 
-.mySwiper .swiper-slide {
+#internships .mySwiper .swiper-slide {
   display: flex;
   align-items: center;
 }

@@ -1,0 +1,53 @@
+.Swiper3d .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Swiper3d .swiper-slide {
+  width: 300px;
+  margin: 0 30px;
+}
+
+.Box {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.course {
+  margin-top: 75px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 25px 0 rgba(20, 27, 202, 0.17);
+}
+
+.course .icon {
+  margin-bottom: -21px;
+  transform: translateY(-50%);
+  text-align: center;
+}
+
+.course:hover h4,
+.course:hover p {
+  color: #fff;
+}
+
+.ux:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+  background-image: linear-gradient(-45deg, #289bc3 0%, #ff8caf 100%);
+}
+
+.web:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+  background-image: linear-gradient(-45deg, #fc5d3d 0%, #f0c020 100%);
+}
+
+.vc:hover {
+  box-shadow: 0 0 25px 0 rgba(20, 27, 201, 0.05);
+  background-image: linear-gradient(-45deg, #34b5bf 0%, #210c59 100%);
+}
