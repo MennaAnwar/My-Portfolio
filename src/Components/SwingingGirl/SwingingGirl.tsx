@@ -3,7 +3,7 @@ import "./SwingingGirl.css";
 
 const SwingingGirl: FC = () => {
   return (
-    <div className="container nav_container ">
+    <div className="container nav_container mt-5">
       <div className="col-md-offset-3 col-sm-10 col-md-8 text-center mauto">
         <div className="bg-svg">
           <svg
