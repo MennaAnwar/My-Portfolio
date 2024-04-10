@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Girl from "../GIRL/Girl";
 import "./About.css";
-import Wave from "../Waves/Wave";
+import SwingingGirl from "../SwingingGirl/SwingingGirl";
 
 const About: FC = () => {
   const tech = [
@@ -16,7 +16,6 @@ const About: FC = () => {
 
   return (
     <div id="about">
-      <Wave upperFill="#2c3e50" LowerFill="#d8b2e1" />
       <div
         id="intro"
         className="row text-center justify-content-center align-items-center px-2"
@@ -33,12 +32,22 @@ const About: FC = () => {
             maintainable code and continuous learning to solve complex
             challenges, ensuring optimal performance and user satisfaction.
           </p>
+        </div>
+      </div>
+      <div
+        id="skills"
+        className="row justify-content-center align-items-center px-2"
+      >
+        <div className="col-sm-12 col-md-12 col-lg-6">
           <p className="reg fs-4">Some Technologies I have used recently:</p>
           <ul className="skills-list justify-content-center reg">
             {tech.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
+        </div>
+        <div className="col-sm-12 col-md-12 col-lg-6">
+          <SwingingGirl />
         </div>
       </div>
     </div>

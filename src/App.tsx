@@ -4,7 +4,6 @@ import Contact from "./Components/Contact/Contact";
 import Cursor from "./Components/Cursor/Cursor";
 import Education from "./Components/Education/Education";
 import Internships from "./Components/Internships/Internships";
-import Intro from "./Components/Intro/Intro";
 import Projects from "./Components/Projects/Projects";
 import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
@@ -13,7 +12,6 @@ function App() {
     <div className="App">
       <Cursor />
       <ScrollToTop />
-      <Intro />
       <About />
       <Education />
       <Internships />
