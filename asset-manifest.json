@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/My-Portofolio/static/css/main.ef84ddfd.css",
+    "main.js": "/My-Portofolio/static/js/main.45683285.js",
+    "static/js/453.977729c1.chunk.js": "/My-Portofolio/static/js/453.977729c1.chunk.js",
+    "static/media/boxicons.svg": "/My-Portofolio/static/media/boxicons.9e2b21b135bc7d4c803f.svg",
+    "static/media/boxicons.eot": "/My-Portofolio/static/media/boxicons.65a8ce52fc5427e8f94d.eot",
+    "static/media/boxicons.woff": "/My-Portofolio/static/media/boxicons.d12afc36557395143e4b.woff",
+    "static/media/boxicons.ttf": "/My-Portofolio/static/media/boxicons.db9ddb1898dbd76badca.ttf",
+    "static/media/codeclause.png": "/My-Portofolio/static/media/codeclause.5a347bace5489c1a7f14.png",
+    "static/media/prodigy.png": "/My-Portofolio/static/media/prodigy.0a8a68893feff2eb4896.png",
+    "static/media/boxicons.woff2": "/My-Portofolio/static/media/boxicons.df635aaf04cd75132f62.woff2",
+    "static/media/codevixens.jpg": "/My-Portofolio/static/media/codevixens.fc8c448c68295abc9239.jpg",
+    "index.html": "/My-Portofolio/index.html",
+    "main.ef84ddfd.css.map": "/My-Portofolio/static/css/main.ef84ddfd.css.map",
+    "main.45683285.js.map": "/My-Portofolio/static/js/main.45683285.js.map",
+    "453.977729c1.chunk.js.map": "/My-Portofolio/static/js/453.977729c1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef84ddfd.css",
+    "static/js/main.45683285.js"
+  ]
+}
