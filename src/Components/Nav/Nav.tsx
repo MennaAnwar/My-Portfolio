@@ -36,7 +36,7 @@ export default function Nav() {
                         to="about"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={-90}
                         duration={500}
                       >
                         <span className="text nav-text">About</span>
@@ -47,7 +47,7 @@ export default function Nav() {
                         to="education"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={130}
                         duration={500}
                       >
                         <span className="text nav-text">Education</span>
@@ -58,7 +58,7 @@ export default function Nav() {
                         to="internships"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={130}
                         duration={500}
                       >
                         <span className="text nav-text">Internships</span>
@@ -69,7 +69,7 @@ export default function Nav() {
                         to="projects"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={130}
                         duration={500}
                       >
                         <span className="text nav-text">Projects</span>
@@ -80,7 +80,7 @@ export default function Nav() {
                         to="contact"
                         spy={true}
                         smooth={true}
-                        offset={-70}
+                        offset={130}
                         duration={500}
                       >
                         <span className="text nav-text">Contact</span>
